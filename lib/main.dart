@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:statemanagement/home/bloc.dart';
-import 'package:statemanagement/home/getx.dart';
-import 'package:statemanagement/home/provider.dart';
+import 'package:statemanagement/screens/home/bloc.dart';
+import 'package:statemanagement/screens/home/getx.dart';
+import 'package:statemanagement/screens/home/provider.dart';
 
 void main() {
   runApp(const MyApp());
