@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../model/completedServiceModel.dart';
 
 class CompletedServiceProvider extends ChangeNotifier{
@@ -9,15 +8,16 @@ class CompletedServiceProvider extends ChangeNotifier{
 
   getCompletedServices()=>completedServices;
 
-  addCity(CompletedServiceModel csm){
+  addOneCS(CompletedServiceModel csm){
     completedServices.add(csm);
+  }
+
+  addAllCS(List<CompletedServiceModel> csm){
+    completedServices.addAll(csm);
+    notifyListeners();
   }
 
   startFetching() {fetching = true;notifyListeners();}
 
   stopFetching(){fetching = false; notifyListeners();}
-
-
-
-
 }

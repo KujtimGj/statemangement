@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:statemanagement/business/provider/completedServicesProvider.dart';
+import 'package:statemanagement/business/provider/serverProvider.dart';
 import 'package:statemanagement/screens/home/bloc.dart';
 import 'package:statemanagement/screens/home/getx.dart';
 import 'package:statemanagement/screens/home/provider.dart';
@@ -13,8 +16,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Base(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_)=>CompletedServiceProvider()),
+        ChangeNotifierProvider(create: (_)=>ServerProvider())
+      ],
+      child: const MaterialApp(
+        home: Base(),
+      ),
     );
   }
 }
@@ -51,7 +60,7 @@ class _BaseState extends State<Base> {
         items: const [
           BottomNavigationBarItem(icon: Icon(Icons.home_max,color: Colors.indigo,), label: ''),
           BottomNavigationBarItem(icon: Icon(Icons.abc,color: Colors.indigo,), label: ''),
-          BottomNavigationBarItem(icon: Icon(Icons.abc,color: Colors.indigo,), label: ''),
+          BottomNavigationBarItem(icon: Icon(Icons.ac_unit,color: Colors.indigo,), label: ''),
         ],
       ),
     );

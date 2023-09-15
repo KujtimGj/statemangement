@@ -9,7 +9,7 @@ class Bloc extends StatelessWidget {
       appBar:AppBar(
         centerTitle: true,
         title:const Text("Bloc"),
-        backgroundColor: Colors.indigo,
+        backgroundColor: Colors.amber,
       ),
       body: const SingleChildScrollView(
         child: Column(

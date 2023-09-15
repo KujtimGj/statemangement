@@ -9,13 +9,8 @@ getCompletedServices(context)async{
   var fullUrl = '/completedServices';
   csProvider.startFetching();
   var response = await Api().getData(fullUrl, context);
-
   var csList = response.map<CompletedServiceModel>((json)=>CompletedServiceModel.fromJson(json)).toList();
-
-  csProvider.addCity(csList);
-
+  csProvider.addAllCS(csList);
+  print(csList);
   csProvider.stopFetching();
-
-
-
 }

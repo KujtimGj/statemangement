@@ -10,7 +10,7 @@ class GetXDart extends StatelessWidget {
       appBar:AppBar(
         centerTitle: true,
         title:const Text("GetX"),
-        backgroundColor: Colors.indigo,
+        backgroundColor: Colors.redAccent,
       ),
     );
   }

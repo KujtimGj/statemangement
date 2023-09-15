@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'package:statemanagement/business/api/completedServices.dart';
+import 'package:statemanagement/business/model/completedServiceModel.dart';
 
 
 class ProviderDart extends StatefulWidget {
@@ -10,15 +12,17 @@ class ProviderDart extends StatefulWidget {
 }
 
 class _ProviderDartState extends State<ProviderDart> {
-  
-  
 
-  @override
-  void initState() {
 
-    super.initState();
-  }
-  
+
+  // @override
+  // void initState() {
+  //   getCompletedServices(context);
+  //   super.initState();
+  // }
+
+  List<CompletedServiceModel>? csm;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,6 +31,11 @@ class _ProviderDartState extends State<ProviderDart> {
         title:const Text("Provider"),
         backgroundColor: Colors.indigo,
       ),
+      body:SingleChildScrollView(
+        child: Column(
+
+        ),
+      )
     );
   }
 }
