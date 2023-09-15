@@ -10,10 +10,10 @@ class CompletedServiceModel{
         ServiceID: fromJson['ServiceID'],
         CreditUsed: fromJson['CreditUsed'],
         id: fromJson['_id'],
-        clientEmail:fromJson['client']['clientEmail'],
-        clientUsername: fromJson['client']['clientUsername'],
-        staffEmail: fromJson['staff']['staffEmail'],
-        staffUsername:fromJson['staff'][' staffUsername']
+        clientEmail:fromJson['client']['email'],
+        clientUsername: fromJson['client']['userName'],
+        staffEmail: fromJson['staff']['email'],
+        staffUsername:fromJson['staff']['userName']
     );
   }
 }

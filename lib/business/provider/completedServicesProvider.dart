@@ -8,16 +8,24 @@ class CompletedServiceProvider extends ChangeNotifier{
 
   getCompletedServices()=>completedServices;
 
-  addOneCS(CompletedServiceModel csm){
+  addOneCS(CompletedServiceModel csm) {
     completedServices.add(csm);
+
   }
+    addAllCS(List<CompletedServiceModel> csm) {
+      completedServices = csm;
+      notifyListeners();
+    }
 
-  addAllCS(List<CompletedServiceModel> csm){
-    completedServices.addAll(csm);
-    notifyListeners();
-  }
+    startFetching() {
+      fetching = true;
+      notifyListeners();
+    }
 
-  startFetching() {fetching = true;notifyListeners();}
+    stopFetching() {
+      fetching = false;
+      notifyListeners();
+    }
 
-  stopFetching(){fetching = false; notifyListeners();}
+
 }
