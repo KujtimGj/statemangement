@@ -22,8 +22,6 @@ class Api {
     try {
       var res = await http.get(Uri.parse(
           '${Api().api}/completedservices/byStaff/64ec660d36090e9602c172ca'));
-
-      print('${Api().api}completedservices/byStaff/64ec660d36090e9602c172ca');
       return jsonDecode(res.body);
     } catch (error) {
       provider.changeServerStatus(false);
